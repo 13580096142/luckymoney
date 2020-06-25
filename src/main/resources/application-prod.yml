@@ -1,0 +1,25 @@
+# 访问配置
+server:
+  port: 8081
+  servlet:
+    context-path: /luckymoney
+
+# 自定义对象数据
+limit:
+  minMoney: 0.01
+  maxMoney: 200
+  description: 红包最少要发${minMoney}元,最大可以发${limit.maxMoney}元
+
+# 数据源配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql:///dbmybatis?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: "065864"
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
